@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Dicionário de Dados - Ponce Aplicação de Tecnologia</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <header class="topbar">
+    <button id="menuBtn" class="btn ghost" aria-label="Abrir menu">Menu</button>
+    <div class="brand"><strong>Dicionário de Dados</strong><span>Ponce Comercio e Representacoes LTDA (Ponce Aplicação
+        de Tecnologia)</span></div>
+    <button id="themeBtn" class="btn ghost" aria-label="Alternar tema">Modo escuro</button>
+  </header>
+  <div class="layout">
+    <nav id="sidebar" class="sidebar" aria-label="Tabelas">
+      <h2>Tabelas</h2>
+      <ul id="navList"></ul>
+    </nav>
+    <main>
+      <section id="identificacao" class="card">
+        <h1>Sistema de Gestão de Vendas, Compras e Controle Financeiro</h1>
+        <p><strong>Escopo:</strong> Banco de dados para a Ponce, empresa de revenda sem estoque físico próprio, que
+          centraliza clientes, vendedores, produtos, fornecedores, vendas, itens vendidos, compras e notas fiscais para
+          apoiar o controle financeiro, relatórios de faturamento e a tomada de decisão. Projeto da disciplina Modelagem
+          de Banco de Dados (UNICID), orientado pelo Prof. Dr. Diego Carvalho.</p>
+        <p><strong>Tecnologia:</strong> MySQL</p>
+        <h3>Data Literacy</h3>
+        <p>Data literacy é a capacidade de ler, interpretar, avaliar e comunicar dados com responsabilidade. Neste
+          projeto, o dicionário explica o significado, a origem, as regras e os acessos de cada atributo para apoiar
+          decisões informadas, identificar limitações do modelo e proteger dados pessoais.</p>
+        <h3>Governança dos dados</h3>
+        <p><strong>Data Owners (papéis acadêmicos propostos):</strong> Allan Neres Gomes e Christian Barra dos Santos,
+          responsáveis pela validação dos requisitos e definições do modelo.</p>
+        <p><strong>Data Stewards:</strong> Diego da Veiga Balielo Ortigosa, Erick Viana, Gabriel Chaves Ribeiro,
+          Giovanna Nascimento dos Santos, Guilherme Alves, Gustavo Cruz Alves Nunes, Julia Ayomide Canuto da Silva,
+          Kauan de Lima Freitas, Maycon Moura da Silva, Nikollas Paiva, Pietro Tavares Camargo, Rafael Enrico Barreto
+          Ruvolo e Thomas Anderson Nery dos Santos, responsáveis pela qualidade, documentação e consistência dos dados.
+          A atribuição é acadêmica e deve ser validada pelos integrantes e pela empresa.</p>
+        <h3>Responsáveis (Grupo 4)</h3>
+        <ul id="teamList" class="team"></ul>
+      </section>
+      <section class="controls card">
+        <a class="btn primary" href="docs/Especificacao_Requisitos_Regras_Negocio_BD.pdf" download="Especificacao_Requisitos_Regras_Negocio_BD.pdf">Baixar Especificação
+          de Requisitos (PDF)</a>
+        <button id="derBtn" class="btn">Abrir DER</button>
+        <input id="search" type="search" placeholder="Filtrar por tabela ou coluna..." aria-label="Filtrar">
+      </section>
+      <p id="empty" hidden>Nenhuma tabela ou coluna encontrada para este filtro.</p>
+      <div id="dict" class="dict"></div>
+    </main>
+  </div>
+  <div id="modal" class="modal" hidden>
+    <div class="modal-bar">
+      <button id="zin" class="btn">Zoom +</button>
+      <button id="zout" class="btn">Zoom -</button>
+      <button id="zreset" class="btn">Reset</button>
+      <button id="close" class="btn primary">Fechar</button>
+    </div>
+    <div id="stage" class="stage"><img id="derImg" src="assets/der.png" alt="Diagrama Entidade-Relacionamento"></div>
+  </div>
+  <script src="https://cdn.jsdelivr.net/npm/@panzoom/panzoom@4.5.1/dist/panzoom.min.js"></script>
+  <script src="script.js"></script>
+</body>
+
+</html>
